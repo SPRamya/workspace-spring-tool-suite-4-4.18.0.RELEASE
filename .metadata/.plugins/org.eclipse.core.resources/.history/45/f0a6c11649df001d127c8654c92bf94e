@@ -1,0 +1,21 @@
+package com.example.game.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class GameController {
+	@GetMapping("/login")
+	public String login()
+	{
+		return "I am  in login page";
+		
+	}
+	@GetMapping("/view/{username}")
+	public String view(@PathVariable("username") String username)
+	{
+		return "I am in userpage"+username;
+	}
+
+}
